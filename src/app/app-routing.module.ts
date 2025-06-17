@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'pokemon-list',
+    loadChildren: () => import('./pokemon-list/pokemon-list.module').then( m => m.PokemonListPageModule)
+  },
+  {
+    path: 'pokemon-detail',
+    loadChildren: () => import('./pokemon-detail/pokemon-detail.module').then( m => m.PokemonDetailPageModule)
+  },
+  {
+    path: 'favorites',
+    loadChildren: () => import('./favorites/favorites.module').then( m => m.FavoritesPageModule)
+  },
 ];
 
 @NgModule({

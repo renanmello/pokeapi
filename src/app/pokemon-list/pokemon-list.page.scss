@@ -1,0 +1,21 @@
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: white;
+}
+
+ion-searchbar {
+  --background: rgba(255, 255, 255, 0.2);
+  --color: white;
+  --placeholder-color: rgba(255, 255, 255, 0.6);
+  --icon-color: white;
+}
+
+ion-refresher {
+  z-index: 1000;
+}
+
+.no-results {
+  text-align: center;
+  margin-top: 50%;
+  color: var(--ion-color-medium);
+}

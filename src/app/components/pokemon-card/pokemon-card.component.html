@@ -1,3 +1,31 @@
-<p>
-  pokemon-card works!
-</p>
+<ion-card class="pokemon-card" [color]="getTypeColor(pokemon.types[0].type.name)">
+  <div class="card-background"></div>
+  <img 
+    [src]="getPokemonImageUrl()" 
+    alt="{{ pokemon.name }}" 
+    (error)="handleImageError($event)"
+    class="pokemon-image"
+  />
+  <ion-card-header>
+    <ion-card-title>{{ pokemon.name | titlecase }}</ion-card-title>
+    <ion-card-subtitle>#{{ pokemon.id | number:'3.0' }}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-chip 
+      *ngFor="let type of pokemon.types" 
+      [color]="getTypeColor(type.type.name)"
+      outline
+    >
+      {{ type.type.name | titlecase }}
+    </ion-chip>
+  </ion-card-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button 
+      (click)="toggleFavorite($event)" 
+      size="small"
+      [color]="pokemon.isFavorite ? 'danger' : 'light'"
+    >
+      <ion-icon [name]="pokemon.isFavorite ? 'heart' : 'heart-outline'"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-card>

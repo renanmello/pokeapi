@@ -13,8 +13,9 @@ import { PokemonDetailPage } from './pokemon-detail.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PokemonDetailPageRoutingModule
+    PokemonDetailPageRoutingModule,
+    PokemonDetailPage
   ],
-  declarations: [PokemonDetailPage]
+  declarations: []
 })
 export class PokemonDetailPageModule {}

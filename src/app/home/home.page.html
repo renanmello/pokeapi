@@ -1,20 +1,20 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      Pokédex App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="home-container">
+    <img src="assets/pokeball.png" alt="Pokéball" class="logo">
+    <h1>Bem-vindo à Pokédex</h1>
+    <p>Explore o mundo dos Pokémon</p>
+    
+    <ion-button expand="block" routerLink="/pokemon-list" class="start-button">
+      Começar
+      <ion-icon slot="end" name="arrow-forward"></ion-icon>
+    </ion-button>
   </div>
 </ion-content>
